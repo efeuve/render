@@ -1,8 +1,5 @@
 import { h, render } from 'https://unpkg.com/preact@latest?module';
-import {
-  useState,
-  useEffect,
-} from 'https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module';
+import { useState } from 'https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module';
 import htm from 'https://unpkg.com/htm@latest/dist/htm.module.js?module';
 
 // Initialize htm with Preact
