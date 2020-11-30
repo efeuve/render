@@ -1,0 +1,16 @@
+:root {
+  --title-0F346A: #11319d;
+  --PalatineBlue: #2143e8;
+}
+
+.hide {
+  display: none;
+}
+
+.go-container {
+  background-image: linear-gradient(
+    89deg,
+    var(--title-0F346A) 0%,
+    var(--PalatineBlue) 100%
+  );
+}
