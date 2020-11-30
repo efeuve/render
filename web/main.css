@@ -1,0 +1,15 @@
+/*
+.go-to-toggle {
+  display : none !important;
+}*/
+
+.go-toggle {
+  top : -5px;
+  right : -5px;
+  color : white;
+  border-radius : 4px;
+  position : absolute !important;
+  padding : 7px 15px !important;
+  background-color : gray !important;
+  z-index : 999 !important;
+}
