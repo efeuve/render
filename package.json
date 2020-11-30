@@ -1,8 +1,0 @@
-{
-  "name": "render",
-  "version": "1.0.0",
-  "main": "main.js",
-  "repository": "https://github.com/fillipvt/render.git",
-  "author": "Felipe <afvasquezt@gmail.com>",
-  "license": "MIT"
-}
