@@ -5,20 +5,11 @@ import htm from 'https://unpkg.com/htm@latest/dist/htm.module.js?module';
 // Initialize htm with Preact
 const html = htm.bind(h);
 
-function Props() {
-  const [count, setCount] = useState(0);
-
-  // set counters
-  const increment = () => setCount(count + 1);
-  // You can also pass a callback to the setter
-  const decrement = () => setCount((currentCount) => currentCount - 1);
+function Base() {
 
   return html`
-    <div>Count: ${count}</div>
-    <p>New content!</p>
-    <button onClick="${increment}">Increment</button>
-    <button onClick="${decrement}">Decrement</button>
+    <div>Lorem Ipsum</div>
   `;
 }
 
-render(html` <${Props} /> `, document.getElementById('preact-container'));
+render(html` <${Base} /> `, document.getElementById('preact-container'));
