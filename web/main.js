@@ -5,6 +5,11 @@ import htm from 'https://unpkg.com/htm@latest/dist/htm.module.js?module';
 // Initialize htm with Preact
 const html = htm.bind(h);
 
+window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+
+hj('tagRecording', ['go-bos-dic20']);
+hj('trigger', 'go-bos-dic20');
+
 function Base() {
   const [toggleObj, setToggleObj] = useState({
     1: false,
@@ -22,6 +27,22 @@ function Base() {
       ...toggleObj,
       [index]: !toggleObj[index],
     });
+    
+    hj('tagRecording', ['pressed-toggle']);
+
+    const dataLayer = window.dataLayer || [];
+
+    if (toggleObj[index]) {
+      dataLayer.push({
+        event: 'go-bos-dic20-test-toggle',
+        toggleState: 'close'
+      });
+    } else {
+      dataLayer.push({
+        event: 'go-bos-dic20-test-toggle',
+        toggleState: 'open'
+      });
+    };
   };
 
   const decode = (str) => {
