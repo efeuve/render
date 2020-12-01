@@ -6,6 +6,36 @@ import htm from 'https://unpkg.com/htm@latest/dist/htm.module.js?module';
 const html = htm.bind(h);
 
 function Base() {
+  const [toggleObj, setToggleObj] = useState({
+    1: false,
+    2: false,
+    3: false,
+  });
+
+  const renderClass = (index) => {
+    if (toggleObj[index]) return 'go-to-toggle';
+    return 'go-to-toggle go-hide';
+  };
+
+  const handleToggle = (index) => {
+    setToggleObj({
+      ...toggleObj,
+      [index]: !toggleObj[index],
+    });
+  };
+
+  const decode = (str) => {
+    const s = '<b>' + str + '</b>';
+    let e = document.createElement('decodeIt');
+    e.innerHTML = s;
+    return e.innerText;
+  };
+
+  const renderArrow = (isOpen) => {
+    if (isOpen) return decode('&#9650;')
+    return decode('&#9660;')
+  }
+
   return html`
     <table
       class="responsive-table with-payout mobile-style-1 mobile-labels-none"
@@ -112,8 +142,11 @@ function Base() {
             ><a href="#best-online-sportsbooks-mybookie"> Discover More</a>
           </td>
         </tr>
-        <tr class="go-to-toggle">
-          <td class="go-toggle">V</td>
+        <tr class="go-small-tr" onClick=${() => handleToggle(1)} style=${!toggleObj[1] ? "margin-bottom: 5px !important;" : "border-bottom: none;"}>
+          Bovada
+          <span>${renderArrow(toggleObj[1])}</span>
+        </tr>
+        <tr class=${renderClass(1)}>
           <td class="rt-type-rank">
             <span class="rank">3</span>
           </td>
@@ -157,8 +190,11 @@ function Base() {
             ><a href="#best-online-sportsbooks-bovada"> Discover More</a>
           </td>
         </tr>
-        <tr class="go-to-toggle">
-          <td class="go-toggle">V</td>
+        <tr class="go-small-tr" onClick=${() => handleToggle(2)} style=${!toggleObj[2] ? "margin-bottom: 5px !important;" : "border-bottom: none;"}>
+          SportsBetting.ag
+          <span>${renderArrow(toggleObj[2])}</span>
+        </tr>
+        <tr class=${renderClass(2)}>
           <td class="rt-type-rank">
             <span class="rank">4</span>
           </td>
@@ -202,8 +238,11 @@ function Base() {
             ><a href="#best-online-sportsbooks-sportsbetting"> Discover More</a>
           </td>
         </tr>
-        <tr class="go-to-toggle">
-          <td class="go-toggle">V</td>
+        <tr class="go-small-tr" onClick=${() => handleToggle(3)} style=${!toggleObj[3] ? "margin-bottom: 5px !important;" : "border-bottom: none;"}>
+          BetOnline
+          <span>${renderArrow(toggleObj[3])}</span>
+        </tr>
+        <tr class=${renderClass(3)}>
           <td class="rt-type-rank">
             <span class="rank">5</span>
           </td>

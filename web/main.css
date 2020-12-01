@@ -4,12 +4,33 @@
 }*/
 
 .go-toggle {
-  top : -5px;
-  right : -5px;
-  color : white;
-  border-radius : 4px;
-  position : absolute !important;
-  padding : 7px 15px !important;
-  background-color : gray !important;
-  z-index : 999 !important;
+  top: -5px;
+  right: -5px;
+  color: white;
+  border-radius: 4px;
+  position: absolute !important;
+  padding: 4px 10px !important;
+  background-color: gray !important;
+  z-index: 999 !important;
+}
+
+.go-hide {
+  display: none !important;
+}
+
+.go-small-tr {
+  display: flex !important;
+  min-height: auto !important;
+  margin-bottom: 0px !important;
+  font-family: 'Roboto Condensed', Arial Narrow, Arial, sans-serif !important;
+  font-size: 18px !important;
+  justify-content: space-between;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
