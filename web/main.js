@@ -35,11 +35,13 @@ function Base() {
     if (toggleObj[index]) {
       dataLayer.push({
         event: 'go-bos-dic20-test-toggle',
+        toggleNumber: index,
         toggleState: 'close'
       });
     } else {
       dataLayer.push({
         event: 'go-bos-dic20-test-toggle',
+        toggleNumber: index,
         toggleState: 'open'
       });
     };
