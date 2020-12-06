@@ -5,7 +5,11 @@ import htm from 'https://unpkg.com/htm@latest/dist/htm.module.js?module';
 // Initialize htm with Preact
 const html = htm.bind(h);
 
-window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+window.hj =
+  window.hj ||
+  function () {
+    (hj.q = hj.q || []).push(arguments);
+  };
 
 hj('tagRecording', ['go-bos-dic20']);
 hj('trigger', 'go-bos-dic20');
@@ -27,7 +31,7 @@ function Base() {
       ...toggleObj,
       [index]: !toggleObj[index],
     });
-    
+
     hj('tagRecording', ['pressed-toggle']);
 
     const dataLayer = window.dataLayer || [];
@@ -36,15 +40,15 @@ function Base() {
       dataLayer.push({
         event: 'go-bos-dic20-test-toggle',
         toggleNumber: index,
-        toggleState: 'close'
+        toggleState: 'close',
       });
     } else {
       dataLayer.push({
         event: 'go-bos-dic20-test-toggle',
         toggleNumber: index,
-        toggleState: 'open'
+        toggleState: 'open',
       });
-    };
+    }
   };
 
   const decode = (str) => {
@@ -55,9 +59,9 @@ function Base() {
   };
 
   const renderArrow = (isOpen) => {
-    if (isOpen) return decode('&#9650;')
-    return decode('&#9660;')
-  }
+    if (isOpen) return decode('&#9650;');
+    return decode('&#9660;');
+  };
 
   return html`
     <table
@@ -165,7 +169,13 @@ function Base() {
             ><a href="#best-online-sportsbooks-mybookie"> Discover More</a>
           </td>
         </tr>
-        <tr class="go-small-tr" onClick=${() => handleToggle(1)} style=${!toggleObj[1] ? "margin-bottom: 5px !important;" : "border-bottom: none;"}>
+        <tr
+          class="go-small-tr"
+          onClick=${() => handleToggle(1)}
+          style=${!toggleObj[1]
+            ? 'margin-bottom: 5px !important;'
+            : 'border-bottom: none;'}
+        >
           Bovada
           <span>${renderArrow(toggleObj[1])}</span>
         </tr>
@@ -213,7 +223,13 @@ function Base() {
             ><a href="#best-online-sportsbooks-bovada"> Discover More</a>
           </td>
         </tr>
-        <tr class="go-small-tr" onClick=${() => handleToggle(2)} style=${!toggleObj[2] ? "margin-bottom: 5px !important;" : "border-bottom: none;"}>
+        <tr
+          class="go-small-tr"
+          onClick=${() => handleToggle(2)}
+          style=${!toggleObj[2]
+            ? 'margin-bottom: 5px !important;'
+            : 'border-bottom: none;'}
+        >
           SportsBetting.ag
           <span>${renderArrow(toggleObj[2])}</span>
         </tr>
@@ -261,7 +277,13 @@ function Base() {
             ><a href="#best-online-sportsbooks-sportsbetting"> Discover More</a>
           </td>
         </tr>
-        <tr class="go-small-tr" onClick=${() => handleToggle(3)} style=${!toggleObj[3] ? "margin-bottom: 5px !important;" : "border-bottom: none;"}>
+        <tr
+          class="go-small-tr"
+          onClick=${() => handleToggle(3)}
+          style=${!toggleObj[3]
+            ? 'margin-bottom: 5px !important;'
+            : 'border-bottom: none;'}
+        >
           BetOnline
           <span>${renderArrow(toggleObj[3])}</span>
         </tr>
