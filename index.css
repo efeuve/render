@@ -1,16 +1,128 @@
-:root {
-  --title-0F346A: #11319d;
-  --PalatineBlue: #2143e8;
-}
-
 .hide {
   display: none;
 }
 
 .go-container {
-  background-image: linear-gradient(
-    89deg,
-    var(--title-0F346A) 0%,
-    var(--PalatineBlue) 100%
-  );
+  font-family: "Roboto Condensed", Arial Narrow, Arial, sans-serif;
+  font-stretch: condensed;
+  font-weight: bold;
+  background-image: linear-gradient(89deg, #11319d 0%, #2143e8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+
+.go-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-right {
+  margin-top: 55px;
+  margin-bottom: 98px;
+}
+
+.go-left {
+  width: 353px;
+  height: 314px;
+  margin: 55px 39px 98px 0;
+}
+
+.go-container .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-container .heading,
+.go-container .bonus,
+.go-container .button {
+  color: #f7ffff;
+}
+
+.go-container .card {
+  border-radius: 15px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(89deg, #1245b7 0%, #092689 99%);
+}
+
+.go-container .logo-bg {
+  position: relative;
+  background-image: url("https://res.cloudinary.com/dhxw87xee/image/upload/v1634930114/las_atlantis_background_x7zmd6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 256.7px;
+  height: 196.6px;
+  margin-right: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.go-container .us-flag {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  z-index: 1;
+}
+
+.go-container .secondary {
+  position: absolute;
+  left: 5px;
+  bottom: -28px;
+  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: light;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5cd0ff;
+  display: block;
+  text-decoration: underline;
+}
+
+.go-container .cta {
+  padding-right: 24px;
+}
+
+.go-container .sub-heading {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 34px;
+  color: #fec06a;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.go-container .bonus {
+  font-size: 40px;
+  line-height: 34px;
+  text-transform: uppercase;
+}
+
+.go-container .heading {
+  font-size: 40px;
+  line-height: 41px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.go-container .button {
+  display: inline-block;
+  font-size: 25px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 16px 59.6px 15px 61.4px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+  border: solid 1px #ff9224;
+  background-image: linear-gradient(to right, #fd8000, #ef6500 98%);
 }

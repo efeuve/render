@@ -5,17 +5,25 @@ const html = htm.bind(vhtml);
 
 const component = html`
   <div class="go-container">
-    <div class="go-left">Image</div>
-    <div class="go-right">
-      <div class="heading">Header</div>
-      <div class="card">
-        <div class="logo">Las Atlantis</div>
-        <div class="cta">
-          <div class="bonus">Bonus text</div>
-          <div class="button">BUTTON</div>
+    <div class="go-col">
+      <div class="go-left">
+        <img src="https://res.cloudinary.com/dhxw87xee/image/upload/v1634930000/bonus_image_uovs66.png" />
+      </div>
+      <div class="go-right">
+        <div class="heading">Get our favorite casino bonus</div>
+        <div class="card">
+          <div class="logo-bg">
+            <img class="us-flag" src="https://res.cloudinary.com/dhxw87xee/image/upload/v1634930030/US_flag_pwa46n.png" alt="" />
+            <img class="logo" src="https://res.cloudinary.com/dhxw87xee/image/upload/v1634930014/las_atlantis_bg_dark_g05pkq.png" alt="" />
+            <a class="secondary">View All Of Our Favorite Bonuses</div>
+          </div>
+          <div class="cta">
+            <div class="bonus">Exclusive $12,500</div>
+            <div class="sub-heading">Deposit Bonus</div>
+            <a class="button">Claim your bonus now</a>
+          </div>
         </div>
       </div>
-      <div class="secondary">Secondary Link</div>
     </div>
   </div>
 `;
