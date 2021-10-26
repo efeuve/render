@@ -3,7 +3,7 @@ Setting up the web page:
 1. Copy the webpage in question into a web folder, outside of the current github repo
 
 ```bash
-wget -E -H -k -K -p -x -nH -nc -e robots=off --no-cache --no-cookies URL
+wget URL
 ```
 
 2. Insert the scripts, styles and element in order to inject the whole component.
@@ -34,3 +34,5 @@ styles.rel = 'stylesheet'
 
 document.getElementsByTagName('head')[0].appendChild(styles);
 ```
+
+4. Use `vite` to set up the dev environment

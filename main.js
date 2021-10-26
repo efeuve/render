@@ -10,7 +10,7 @@ const component = html`
         <img src="https://res.cloudinary.com/dhxw87xee/image/upload/v1634930000/bonus_image_uovs66.png" />
       </div>
       <div class="go-right">
-        <div class="heading">Get our favorite casino bonus</div>
+        <div class="heading">Hello World!!!</div>
         <div class="card">
           <div class="logo-bg">
             <img class="us-flag" src="https://res.cloudinary.com/dhxw87xee/image/upload/v1634930030/US_flag_pwa46n.png" alt="" />
