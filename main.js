@@ -15,7 +15,7 @@ const component = html`
           <img class="logo" src="https://res.cloudinary.com/dhxw87xee/image/upload/v1635290787/las_atlantis_bg_dark_ms3bdr.png" alt="Las Atlantis Casino" />
         </a>
         <div class="cta">
-          <div class="bonus">Exclusive $12,500</div>
+          <div class="bonus">Exclusive $14,000</div>
           <div class="sub-heading">Deposit Bonus</div>
           <a data-action="Bonus Page Top CTA Button" href="https://www.onlineunitedstatescasinos.com/go/lasatlantis-bonuses/" class="button">Claim your bonus now</a>
         </div>
