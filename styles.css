@@ -7,92 +7,104 @@
   font-stretch: condensed;
   font-weight: bold;
   background-image: linear-gradient(89deg, #11319d 0%, #2143e8 100%);
-  display: flex;
+  display: grid;
+  grid-template-areas:
+    "img header"
+    "img card"
+    "img sublink";
   justify-content: center;
-  align-items: left;
   flex-direction: column;
+  padding: 55px 14px 62px 10px;
 }
 
-.go-col {
+.go-img {
+  grid-area: img;
+  align-self: center;
+  margin-right: 39px;
+}
+
+.go-img img {
+  width: 100%;
+  min-width: 193px;
+}
+
+.go-header {
+  grid-area: header;
+  align-self: end;
+  font-size: 40px;
+  line-height: 41px;
+  text-transform: uppercase;
+}
+
+.go-header span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.go-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.go-right {
-  margin-top: 55px;
-  margin-bottom: 98px;
-}
-
-.go-left {
-  width: 353px;
-  height: 314px;
-  margin: 55px 39px 98px 0;
-}
-
-.go-container .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.go-container .heading,
-.go-container .bonus,
-.go-container .button {
-  color: #f7ffff;
-}
-
-.go-container .card {
+  grid-area: card;
+  height: max-content;
+  width: max-content;
+  align-self: center;
+  margin-bottom: 5px;
   border-radius: 15px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-image: linear-gradient(89deg, #1245b7 0%, #092689 99%);
 }
 
-.go-container .logo-bg {
-  position: relative;
+.go-sublink {
+  grid-area: sublink;
+  justify-self: start;
+  margin-left: 5px;
+  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: none;
+  color: #5cd0ff;
+  display: block;
+  text-decoration: underline;
+}
+
+.go-header,
+.go-card .bonus,
+.go-card .button {
+  color: #f7ffff;
+}
+
+.go-card .logo-bg {
   background-image: url("https://res.cloudinary.com/dhxw87xee/image/upload/v1634930114/las_atlantis_background_x7zmd6.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 256.7px;
-  height: 196.6px;
-  margin-right: 21px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: relative;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
-.go-container .us-flag {
+.go-card .us-flag {
   position: absolute;
   top: 16px;
   left: 18px;
   z-index: 1;
 }
 
-.go-container .secondary {
-  position: absolute;
-  left: 5px;
-  bottom: -28px;
-  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: light;
-  letter-spacing: normal;
-  text-align: center;
-  color: #5cd0ff;
-  display: block;
-  text-decoration: underline;
+.go-card .logo {
+  margin: 0 48px;
 }
 
-.go-container .cta {
-  padding-right: 24px;
+.go-card .cta {
+  padding: 20px 23.6px 26px 20.6px;
 }
 
-.go-container .sub-heading {
+.go-card .sub-heading {
   font-size: 30px;
   font-weight: bold;
   line-height: 34px;
@@ -101,20 +113,14 @@
   margin-bottom: 10px;
 }
 
-.go-container .bonus {
+.go-card .bonus {
   font-size: 40px;
   line-height: 34px;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
-.go-container .heading {
-  font-size: 40px;
-  line-height: 41px;
-  text-transform: uppercase;
-  margin-bottom: 13px;
-}
-
-.go-container .button {
+.go-card .button {
   display: inline-block;
   font-size: 25px;
   line-height: 22px;
@@ -125,4 +131,110 @@
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
   border: solid 1px #ff9224;
   background-image: linear-gradient(to right, #fd8000, #ef6500 98%);
+}
+
+@media (max-width: 778px) {
+  .go-container {
+    grid-template-areas:
+      ". header"
+      "img card"
+      ". sublink";
+    padding: 37px 15px 36px 12px;
+  }
+  .go-img {
+    margin-right: 20px;
+  }
+  .go-img img {
+    width: 193px;
+  }
+  .go-header {
+    align-self: center;
+    text-align: center;
+  }
+  .go-card {
+    margin-bottom: 13px;
+  }
+  .go-card .logo {
+    margin: 0 20px;
+  }
+  .go-card .cta {
+    padding: 20.1px 15.6px 26px 16.4px;
+  }
+  .go-header span {
+    margin-bottom: 11px;
+  }
+  .go-card .button {
+    padding: 16px 31.5px 15px 32.5px;
+  }
+  .go-sublink {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .go-container {
+    grid-template-areas:
+      "header"
+      "card"
+      "sublink";
+    padding: 32px 10px 30px 10px;
+  }
+  .go-header {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .go-header span {
+    margin-bottom: 20.5px;
+  }
+  .go-img {
+    display: none;
+  }
+  .go-card {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    margin-bottom: 27.5px;
+  }
+  .go-card .cta {
+    display: grid;
+    flex-direction: column-reverse;
+    grid-template-areas:
+      "button"
+      "bonus"
+      "subheading";
+    padding: 13.8px 10.1px 20.5px 9.8px;
+  }
+  .go-card .logo-bg {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+  .go-card .logo {
+    padding: 36.5px 0;
+  }
+
+  .go-card .bonus {
+    grid-area: bonus;
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    margin: 0;
+  }
+  .go-card .sub-heading {
+    grid-area: subheading;
+    font-size: 25px;
+    line-height: 34px;
+    text-align: center;
+    margin: 0;
+  }
+  .go-card .button {
+    grid-area: button;
+    padding: 18px 20px;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 9.5px;
+  }
+  .go-sublink {
+    margin: 0;
+    justify-self: center;
+  }
 }
