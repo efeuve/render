@@ -89,6 +89,10 @@
   border-bottom-left-radius: 15px;
 }
 
+.go-card .logo-bg:hover {
+  opacity: 0.8;
+}
+
 .go-card .us-flag {
   position: absolute;
   top: 16px;
