@@ -133,6 +133,10 @@
   background-image: linear-gradient(to right, #fd8000, #ef6500 98%);
 }
 
+.go-card .button:hover {
+  background-image: linear-gradient(to right, #F07300, #E25800 98%);
+}
+
 @media (max-width: 778px) {
   .go-container {
     grid-template-areas:
